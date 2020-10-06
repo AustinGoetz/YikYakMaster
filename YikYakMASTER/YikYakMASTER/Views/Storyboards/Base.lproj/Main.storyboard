@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed-->
+        <scene sceneID="MC7-Hj-Fb2">
+            <objects>
+                <tableViewController id="baL-Pa-g4L" customClass="PostListTableViewController" customModule="YikYak35" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fLR-vZ-jvf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="0.20595327020000001" green="0.64870214459999997" blue="0.61752068999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.78314596410000004" green="0.83284550909999999" blue="0.75820225480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="208" id="kBb-ai-BlT">
+                                <rect key="frame" x="0.0" y="28" width="414" height="208"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kBb-ai-BlT" id="D1F-rM-kVM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-zc-q7Y">
+                                            <rect key="frame" x="356" y="36" width="46" height="136"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="666-vn-0Kg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="7XX-aP-voV"/>
+                                                        <constraint firstAttribute="width" constant="46" id="Y1l-Kn-Tmj"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.18163812160000001" green="0.57393574709999995" blue="0.55081474779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Button" image="singleUp">
+                                                        <color key="titleColor" red="0.56202930210000002" green="0.78334778549999995" blue="0.6433670521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlD-lF-6EG">
+                                                    <rect key="frame" x="0.0" y="46" width="46" height="44"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                    <color key="textColor" red="0.56202930210000002" green="0.78334778549999995" blue="0.6433670521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBe-NC-arp">
+                                                    <rect key="frame" x="0.0" y="106" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="7we-5c-8nk"/>
+                                                        <constraint firstAttribute="width" constant="46" id="Vyy-Jb-6ea"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.18163812160000001" green="0.57393574709999995" blue="0.55081474779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Button" image="singleDown"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'd like to apologize to my roomates for actually yelling &quot;Noooooooo......&quot; at my alarm clock the past couple of days." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa4-5H-PPE">
+                                            <rect key="frame" x="28" y="19" width="320" height="170"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="OYm-zc-q7Y" secondAttribute="bottom" constant="36" id="6bM-nG-1OD"/>
+                                        <constraint firstItem="OYm-zc-q7Y" firstAttribute="trailing" secondItem="D1F-rM-kVM" secondAttribute="trailingMargin" constant="8" id="8fU-Hk-g0P"/>
+                                        <constraint firstItem="OYm-zc-q7Y" firstAttribute="top" secondItem="D1F-rM-kVM" secondAttribute="top" constant="36" id="EGS-pS-tqg"/>
+                                        <constraint firstItem="wa4-5H-PPE" firstAttribute="leading" secondItem="D1F-rM-kVM" secondAttribute="leadingMargin" constant="8" id="Tgy-9U-QnJ"/>
+                                        <constraint firstItem="OYm-zc-q7Y" firstAttribute="leading" secondItem="wa4-5H-PPE" secondAttribute="trailing" constant="8" id="o43-Lg-M2H"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wa4-5H-PPE" secondAttribute="bottom" constant="8" id="rwX-Su-XtO"/>
+                                        <constraint firstItem="wa4-5H-PPE" firstAttribute="top" secondItem="D1F-rM-kVM" secondAttribute="topMargin" constant="8" id="s3Z-TW-iiR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="sxq-N8-KOd" kind="show" identifier="" id="Q8C-yV-PK9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Feed" id="QZv-pB-f1K">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="DXI-pN-7ac">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Yzq-cH-vF7">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aoR-rP-QAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2409" y="-1751"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8wT-vl-2Kf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vZ2-Oc-tlg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dJG-0B-YRm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.7065064311" green="0.92781978850000002" blue="0.78429657220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="baL-Pa-g4L" kind="relationship" relationship="rootViewController" id="dY3-UI-Zik"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sIX-pP-SqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3155.072463768116" y="-1751.1160714285713"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lb5-j4-kGG">
+            <objects>
+                <viewController id="sxq-N8-KOd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oij-nY-mSD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="KsA-tw-ENV">
+                                <rect key="frame" x="16" y="104" width="382" height="742"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="6js-wz-RMV">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="382"/>
+                                        <color key="backgroundColor" red="0.81833857300000001" green="0.87214630839999996" blue="0.79336827990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6js-wz-RMV" secondAttribute="height" multiplier="1:1" id="1Gv-1j-sra"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I'd like to apologize to my roomates for actually yelling &quot;Noooooooo......&quot; at my alarm clock the past couple of days.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBs-uG-fJ7">
+                                        <rect key="frame" x="0.0" y="391" width="382" height="351"/>
+                                        <color key="backgroundColor" red="0.20261135699999999" green="0.6369180083" blue="0.6057026982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gZl-Ro-yd4"/>
+                        <color key="backgroundColor" systemColor="tableCellGroupedBackgroundColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KsA-tw-ENV" firstAttribute="top" secondItem="gZl-Ro-yd4" secondAttribute="top" constant="16" id="1S4-Ia-jiX"/>
+                            <constraint firstItem="gZl-Ro-yd4" firstAttribute="bottom" secondItem="KsA-tw-ENV" secondAttribute="bottom" constant="16" id="9R3-oO-FIW"/>
+                            <constraint firstItem="KsA-tw-ENV" firstAttribute="trailing" secondItem="gZl-Ro-yd4" secondAttribute="trailing" constant="-16" id="JxX-Vc-o1g"/>
+                            <constraint firstItem="KsA-tw-ENV" firstAttribute="leading" secondItem="gZl-Ro-yd4" secondAttribute="leading" constant="16" id="oGV-ia-pKf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KoE-Ll-tpC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyB-WZ-sc5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1645" y="-1751"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="600" height="520"/>
+        <image name="singleDown" width="570" height="330"/>
+        <image name="singleUp" width="570" height="330"/>
+        <systemColor name="tableCellGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
