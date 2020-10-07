@@ -82,7 +82,7 @@
                                 <connections>
                                     <outlet property="pointTotalLabel" destination="GlD-lF-6EG" id="8kf-os-bzf"/>
                                     <outlet property="postTextLabel" destination="wa4-5H-PPE" id="zWg-hw-fR7"/>
-                                    <segue destination="sxq-N8-KOd" kind="show" identifier="" id="Q8C-yV-PK9"/>
+                                    <segue destination="sxq-N8-KOd" kind="show" identifier="toDetailVC" id="Q8C-yV-PK9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="-3155.072463768116" y="-1751.1160714285713"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Detail View Controller-->
         <scene sceneID="lb5-j4-kGG">
             <objects>
-                <viewController id="sxq-N8-KOd" sceneMemberID="viewController">
+                <viewController id="sxq-N8-KOd" customClass="PostDetailViewController" customModule="YikYakMASTER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oij-nY-mSD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,6 +164,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KoE-Ll-tpC"/>
+                    <connections>
+                        <outlet property="postTextLabel" destination="NBs-uG-fJ7" id="Jq5-KT-iIE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyB-WZ-sc5" sceneMemberID="firstResponder"/>
             </objects>

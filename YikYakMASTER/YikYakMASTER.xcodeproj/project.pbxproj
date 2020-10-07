@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A06B9EE252D4CD80002FD90 /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A06B9ED252D4CD80002FD90 /* PostListTableViewController.swift */; };
 		2A06B9F1252D4E190002FD90 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A06B9F0252D4E190002FD90 /* PostTableViewCell.swift */; };
+		2A06B9F5252D63620002FD90 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A06B9F4252D63620002FD90 /* PostDetailViewController.swift */; };
 		2A13AED2252D202800F13385 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A13AED1252D202800F13385 /* CloudKit.framework */; };
 		2A13AED8252D280400F13385 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13AED7252D280400F13385 /* Post.swift */; };
 		2A13AEE1252D43E400F13385 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13AEE0252D43E400F13385 /* PostController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		2A06B9ED252D4CD80002FD90 /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
 		2A06B9F0252D4E190002FD90 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		2A06B9F4252D63620002FD90 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		2A13AECF252D202300F13385 /* YikYakMASTER.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YikYakMASTER.entitlements; sourceTree = "<group>"; };
 		2A13AED1252D202800F13385 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2A13AED7252D280400F13385 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2A06B9ED252D4CD80002FD90 /* PostListTableViewController.swift */,
+				2A06B9F4252D63620002FD90 /* PostDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A06B9F1252D4E190002FD90 /* PostTableViewCell.swift in Sources */,
+				2A06B9F5252D63620002FD90 /* PostDetailViewController.swift in Sources */,
 				2A13AEE5252D44CA00F13385 /* PostError.swift in Sources */,
 				2A13AED8252D280400F13385 /* Post.swift in Sources */,
 				2A13AEE1252D43E400F13385 /* PostController.swift in Sources */,
@@ -396,7 +400,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.austingoetz.dvmtn.YikYakMASTER;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AustinGoetz.YikkityYakkity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -416,7 +420,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.austingoetz.dvmtn.YikYakMASTER;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AustinGoetz.YikkityYakkity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

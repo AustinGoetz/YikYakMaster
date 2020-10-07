@@ -90,5 +90,18 @@ class PostListTableViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // IIDOO
+        // I: Identifier
+        if segue.identifier == "toDetailVC" {
+            // I: Index
+            if let indexPath = tableView.indexPathForSelectedRow {
+                // D: Destination
+                guard let destinationVC = segue.destination as? PostDetailViewController else { return }
+                // O: Object to send
+                let postToSend = PostController.shared.posts[indexPath.row]
+                // O: receive Object
+                destinationVC.post = postToSend
+            }
+        }
     }
 }
