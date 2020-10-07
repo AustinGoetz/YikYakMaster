@@ -8,5 +8,15 @@
 import Foundation
 
 enum PostError: LocalizedError {
+    case thrownError(Error)
+    case unableToUnwrap
     
+    var errorDescription: String? {
+        switch self {
+        case .thrownError(let error):
+            return "Error in \(#function) : \(error.localizedDescription) \n---\n \(error)"
+        case .unableToUnwrap:
+            return "Unable to unwrap result returned from \(#function)"
+        }
+    }
 }

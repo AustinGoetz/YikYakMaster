@@ -141,11 +141,11 @@
 		2A78DA07252D184F0067CB6E /* YikYakMASTER */ = {
 			isa = PBXGroup;
 			children = (
-				2A13AEE3252D44B100F13385 /* HelpersAndExtensions */,
 				2A13AECF252D202300F13385 /* YikYakMASTER.entitlements */,
 				2A13AED6252D27C100F13385 /* Models */,
 				2A13AECC252D1FC800F13385 /* Views */,
 				2A13AEDD252D431F00F13385 /* Controllers */,
+				2A13AEE3252D44B100F13385 /* HelpersAndExtensions */,
 				2A0A777A252D1E4A005900BF /* Resources */,
 			);
 			path = YikYakMASTER;
