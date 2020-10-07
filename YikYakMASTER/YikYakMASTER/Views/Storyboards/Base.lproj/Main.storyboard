@@ -10,7 +10,7 @@
         <!--Feed-->
         <scene sceneID="MC7-Hj-Fb2">
             <objects>
-                <tableViewController id="baL-Pa-g4L" customClass="PostListTableViewController" customModule="YikYak35" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="baL-Pa-g4L" customClass="PostListTableViewController" customModule="YikYakMASTER" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fLR-vZ-jvf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,7 +18,7 @@
                         <color key="separatorColor" red="0.20595327020000001" green="0.64870214459999997" blue="0.61752068999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.78314596410000004" green="0.83284550909999999" blue="0.75820225480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="208" id="kBb-ai-BlT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="208" id="kBb-ai-BlT" customClass="PostTableViewCell" customModule="YikYakMASTER" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kBb-ai-BlT" id="D1F-rM-kVM">
@@ -38,6 +38,9 @@
                                                     <state key="normal" title="Button" image="singleUp">
                                                         <color key="titleColor" red="0.56202930210000002" green="0.78334778549999995" blue="0.6433670521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="upvoteButtonTapped:" destination="kBb-ai-BlT" eventType="touchUpInside" id="ijn-rJ-6XT"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlD-lF-6EG">
                                                     <rect key="frame" x="0.0" y="46" width="46" height="44"/>
@@ -53,6 +56,9 @@
                                                     </constraints>
                                                     <color key="tintColor" red="0.18163812160000001" green="0.57393574709999995" blue="0.55081474779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button" image="singleDown"/>
+                                                    <connections>
+                                                        <action selector="downvoteButtonTapped:" destination="kBb-ai-BlT" eventType="touchUpInside" id="OpT-6e-iLS"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -74,6 +80,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="pointTotalLabel" destination="GlD-lF-6EG" id="8kf-os-bzf"/>
+                                    <outlet property="postTextLabel" destination="wa4-5H-PPE" id="zWg-hw-fR7"/>
                                     <segue destination="sxq-N8-KOd" kind="show" identifier="" id="Q8C-yV-PK9"/>
                                 </connections>
                             </tableViewCell>
@@ -82,9 +90,15 @@
                     <navigationItem key="navigationItem" title="Feed" id="QZv-pB-f1K">
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="DXI-pN-7ac">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="refreshButtonTapped:" destination="baL-Pa-g4L" id="JXl-fX-uNl"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Yzq-cH-vF7">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="composePostButtonTapped:" destination="baL-Pa-g4L" id="MyW-fU-iWV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
