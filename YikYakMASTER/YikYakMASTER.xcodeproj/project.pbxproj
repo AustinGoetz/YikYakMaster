@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2A13AED2252D202800F13385 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A13AED1252D202800F13385 /* CloudKit.framework */; };
 		2A13AED8252D280400F13385 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13AED7252D280400F13385 /* Post.swift */; };
+		2A13AEE1252D43E400F13385 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13AEE0252D43E400F13385 /* PostController.swift */; };
+		2A13AEE5252D44CA00F13385 /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13AEE4252D44CA00F13385 /* PostError.swift */; };
 		2A78DA09252D184F0067CB6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A78DA08252D184F0067CB6E /* AppDelegate.swift */; };
 		2A78DA0B252D184F0067CB6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A78DA0A252D184F0067CB6E /* SceneDelegate.swift */; };
 		2A78DA10252D184F0067CB6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A78DA0E252D184F0067CB6E /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 		2A13AECF252D202300F13385 /* YikYakMASTER.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YikYakMASTER.entitlements; sourceTree = "<group>"; };
 		2A13AED1252D202800F13385 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2A13AED7252D280400F13385 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2A13AEE0252D43E400F13385 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		2A13AEE4252D44CA00F13385 /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
 		2A78DA05252D184F0067CB6E /* YikYakMASTER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YikYakMASTER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A78DA08252D184F0067CB6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A78DA0A252D184F0067CB6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,38 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2A13AEDD252D431F00F13385 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A13AEDF252D432C00F13385 /* ModelControllers */,
+				2A13AEDE252D432500F13385 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A13AEDE252D432500F13385 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2A13AEDF252D432C00F13385 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A13AEE0252D43E400F13385 /* PostController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		2A13AEE3252D44B100F13385 /* HelpersAndExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A13AEE4252D44CA00F13385 /* PostError.swift */,
+			);
+			path = HelpersAndExtensions;
+			sourceTree = "<group>";
+		};
 		2A78D9FC252D184F0067CB6E = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +141,11 @@
 		2A78DA07252D184F0067CB6E /* YikYakMASTER */ = {
 			isa = PBXGroup;
 			children = (
+				2A13AEE3252D44B100F13385 /* HelpersAndExtensions */,
 				2A13AECF252D202300F13385 /* YikYakMASTER.entitlements */,
 				2A13AED6252D27C100F13385 /* Models */,
 				2A13AECC252D1FC800F13385 /* Views */,
+				2A13AEDD252D431F00F13385 /* Controllers */,
 				2A0A777A252D1E4A005900BF /* Resources */,
 			);
 			path = YikYakMASTER;
@@ -183,7 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A13AEE5252D44CA00F13385 /* PostError.swift in Sources */,
 				2A13AED8252D280400F13385 /* Post.swift in Sources */,
+				2A13AEE1252D43E400F13385 /* PostController.swift in Sources */,
 				2A78DA09252D184F0067CB6E /* AppDelegate.swift in Sources */,
 				2A78DA0B252D184F0067CB6E /* SceneDelegate.swift in Sources */,
 			);
