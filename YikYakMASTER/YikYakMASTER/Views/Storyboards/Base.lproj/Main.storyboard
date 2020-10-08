@@ -143,13 +143,30 @@
                                             <constraint firstAttribute="width" secondItem="6js-wz-RMV" secondAttribute="height" multiplier="1:1" id="1Gv-1j-sra"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I'd like to apologize to my roomates for actually yelling &quot;Noooooooo......&quot; at my alarm clock the past couple of days.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBs-uG-fJ7">
-                                        <rect key="frame" x="0.0" y="391" width="382" height="351"/>
-                                        <color key="backgroundColor" red="0.20261135699999999" green="0.6369180083" blue="0.6057026982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your YikYak:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPE-p6-rTp">
+                                        <rect key="frame" x="0.0" y="391" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMA-EA-zzI">
+                                        <rect key="frame" x="0.0" y="420.5" width="382" height="249"/>
+                                        <color key="backgroundColor" red="0.59349888559999997" green="0.75692886110000002" blue="0.74902164940000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMs-F9-yO9">
+                                        <rect key="frame" x="0.0" y="678.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ia-Vr-Zd0">
+                                        <rect key="frame" x="0.0" y="708" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -163,9 +180,16 @@
                             <constraint firstItem="KsA-tw-ENV" firstAttribute="leading" secondItem="gZl-Ro-yd4" secondAttribute="leading" constant="16" id="oGV-ia-pKf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KoE-Ll-tpC"/>
+                    <navigationItem key="navigationItem" id="KoE-Ll-tpC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="tLJ-09-kMK">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="sxq-N8-KOd" id="Ato-Yy-2D1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="postTextLabel" destination="NBs-uG-fJ7" id="Jq5-KT-iIE"/>
+                        <outlet property="nameTextField" destination="9Ia-Vr-Zd0" id="zOb-fb-ENB"/>
+                        <outlet property="postTextView" destination="nMA-EA-zzI" id="9ac-QS-tmJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyB-WZ-sc5" sceneMemberID="firstResponder"/>

@@ -15,6 +15,12 @@ class PostListTableViewController: UITableViewController {
         fetchPostsAndReload()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.tableView.reloadData()
+    }
+    
     // MARK: - Actions
     @IBAction func composePostButtonTapped(_ sender: Any) {
         presentAlertController()
@@ -44,10 +50,10 @@ class PostListTableViewController: UITableViewController {
         let alertController = UIAlertController(title: "Get Yikkity Yakkity!", message: "Content is user generated and shared with everyone keep that in mind!", preferredStyle: .alert)
         
         alertController.addTextField { (bodyTextField) in
-            bodyTextField.placeholder = "Put your message here!"
+            bodyTextField.placeholder = "Put your message here! 🐃"
         }
         alertController.addTextField { (nameTextField) in
-            nameTextField.placeholder = "Name: Preferably not your own!"
+            nameTextField.placeholder = "Name: Preferably not your own! 🤫"
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

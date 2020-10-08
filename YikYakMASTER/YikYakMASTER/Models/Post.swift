@@ -18,8 +18,8 @@ struct PostStrings {
 }
 
 class Post {
-    let text: String
-    let author: String
+    var text: String
+    var author: String
     let timestamp: Date
     var score: Int
     

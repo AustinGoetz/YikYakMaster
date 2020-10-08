@@ -50,4 +50,24 @@ class PostController {
             completion(.success(fetchedPosts))
         }
     }
+    
+    // Update
+    func update(_ post: Post, completion: @escaping (Result<Post, PostError>) -> Void) {
+        
+        let recordToUpdate = CKRecord(post: post)
+        let operation = CKModifyRecordsOperation(recordsToSave: [recordToUpdate], recordIDsToDelete: nil)
+        operation.savePolicy = .changedKeys
+        operation.qualityOfService = .userInteractive
+        operation.modifyRecordsCompletionBlock = { (records, _, error) in
+            if let error = error {
+                return completion(.failure(.thrownError(error)))
+            }
+            
+            guard let record = records?.first,
+                  let updatedPost = Post(ckRecord: record) else { return completion(.failure(.unableToUnwrap)) }
+            print("Updated \(record.recordID.recordName) successfully in CloudKit")
+            completion(.success(updatedPost))
+        }
+        publicDB.add(operation)
+    }
 }

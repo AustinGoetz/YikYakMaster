@@ -18,9 +18,21 @@ class PostTableViewCell: UITableViewCell {
     
     // MARK: - Actions
     @IBAction func upvoteButtonTapped(_ sender: UIButton) {
+        if let post = post {
+            post.score += 1
+            pointTotalLabel.text = "\(post.score)"
+            PostController.shared.update(post) { (_) in
+            }
+        }
     }
     
     @IBAction func downvoteButtonTapped(_ sender: UIButton) {
+        if let post = post {
+            post.score -= 1
+            pointTotalLabel.text = "\(post.score)"
+            PostController.shared.update(post) { (_) in
+            }
+        }
     }
     
     // MARK: - Class Methods/Functions
