@@ -9,6 +9,9 @@ import Foundation
 import CloudKit
 
 // MARK: - String Constants
+/**
+ PostStrings contains the String values for keys when setting values for CKRecords
+ */
 struct PostStrings {
     static let recordTypeKey = "Post"
     fileprivate static let textKey = "text"
@@ -17,12 +20,17 @@ struct PostStrings {
     fileprivate static let scoreKey = "score"
 }
 
+// MARK: - Class Declaration
 class Post {
+    /// String value of the Post message text
     var text: String
+    /// String value of the Post author name
     var author: String
+    /// Date value of when the Post was created
     let timestamp: Date
+    /// Int value of the Post score
     var score: Int
-    
+    /// The ID of the Post object's CKRecord
     let ckRecordID: CKRecord.ID
     
     init(text: String, author: String, timestamp: Date = Date(), score: Int = 0, ckRecordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)) {
@@ -43,6 +51,12 @@ extension Post {
               let score = ckRecord[PostStrings.scoreKey] as? Int else { return nil }
         
         self.init(text: text, author: author, timestamp: timestamp, score: score, ckRecordID: ckRecord.recordID)
+    }
+}
+
+extension Post: Equatable {
+    static func == (lhs: Post, rhs: Post) -> Bool {
+        return lhs.timestamp == rhs.timestamp
     }
 }
 
