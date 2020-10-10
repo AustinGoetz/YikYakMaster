@@ -45,6 +45,24 @@ class PostListTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let postToDelete = PostController.shared.posts[indexPath.row]
+            guard let indexOfPostToDelete = PostController.shared.posts.firstIndex(of: postToDelete) else { return }
+            PostController.shared.delete(post: postToDelete) { (result) in
+                switch result {
+                case .success(_):
+                    PostController.shared.posts.remove(at: indexOfPostToDelete)
+                    DispatchQueue.main.async {
+                        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                    }
+                case .failure(let error):
+                    print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
+                }
+            }
+        }
+    }
+    
     // MARK: - Class Methods/Functions
     func presentAlertController() {
         let alertController = UIAlertController(title: "Get Yikkity Yakkity!", message: "Content is user generated and shared with everyone keep that in mind!", preferredStyle: .alert)
